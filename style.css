@@ -1,0 +1,333 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: relative;
+    background: url(./img/maxresdefault.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    border-bottom: 1px solid white;
+    width: 100%;
+    background-repeat: no-repeat;
+    align-items: center;
+}
+
+header .nav {
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    left: 0;
+    top: 0;
+    background: rgba(24, 42, 78, 2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 95px;
+}
+
+header .nav .nav-logo {
+    text-align: center;
+}
+
+header .nav .nav-logo>p {
+    color: #ffffff;
+    font-size: 7px;
+    text-transform: uppercase;
+}
+
+header .nav .nav-logo>a {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 25px;
+    border: 1px solid orange;
+    border-bottom: none;
+    padding: 7px;
+}
+
+header .nav .nav-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .nav .nav-item .nav-link>ul {
+    display: flex;
+}
+
+header .nav .nav-item .nav-link>ul li a {
+    padding: 5px 15px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;
+    transition: .2s ease;
+}
+
+header .nav .nav-item .nav-link>ul li a:hover {
+    border-bottom: 2px solid #fff;
+    transition: .2s ease;
+}
+
+header .nav .nav-item .nav-call .call {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 2px solid #fff;
+    border-radius: 30%;
+    transition: .5s ease-in-out;
+}
+
+.call-center {
+    display: none;
+}
+
+header .nav .nav-item .nav-call .call:hover {
+    border-radius: 50%;
+    transition: .5s ease;
+}
+
+header .nav .nav-item .nav-call .call i {
+    font-size: 30px;
+    transform: rotateX(30deg);
+    color: #fff;
+}
+
+header .nav .nav-item .nav-call .call i:hover {
+    transform: rotate(100deg);
+    transform: rotateX(50deg);
+}
+
+header .header-info {
+    color: #ffffff;
+    padding: 235px 100px;
+}
+
+header .header-info h1 {
+    font-size: 45px;
+    letter-spacing: 1.5px;
+}
+
+header .header-info p {
+    padding: 24px 0;
+    font-size: 25px;
+    letter-spacing: 1.8px;
+    font-weight: 600;
+}
+
+header .header-info .info-icon a {
+    font-size: 30px;
+    padding: 0 10px;
+    color: #fff;
+}
+
+/* Responsive start */
+/* lg(992px)<=1199px */
+@media screen and (max-width:1320px) {
+    header .nav {
+        height: 10%;
+    }
+
+    header .header-info h1 {
+        font-size: 40px;
+    }
+
+    header .header-info p {
+        font-size: 23px;
+        letter-spacing: 0.8px;
+    }
+
+    header .header-info {
+        padding: 225px 100px;
+    }
+}
+
+/* md(768px) <= 991px */
+@media screen and (max-width:991px) {
+    header .nav {
+        padding: 8px 28px;
+    }
+
+    header .header-info {
+        padding: 225px 30px;
+    }
+
+    header .header-info h1 {
+        font-size: 35px;
+        letter-spacing: 0;
+    }
+
+    header .header-info p {
+        font-size: 21px;
+        padding: 15px 0;
+    }
+}
+
+/* sm(576px) <= 767px */
+@media screen and (max-width:767px) {
+    header .nav {
+        padding: 8px 10px;
+    }
+
+    header .nav .nav-item .nav-link>ul li a {
+        padding: 5px 12px;
+    }
+
+    header .nav .nav-item .nav-call .call {
+        width: 40px;
+        height: 40px;
+    }
+
+    header .nav .nav-item .nav-call .call i {
+        font-size: 25px;
+    }
+}
+
+/* xs(320px) <= 575px */
+@media screen and (max-width:575px) {
+    header .nav {
+        padding: 8px 10px;
+    }
+
+    /* header .nav .nav-item .nav-call .call a i{
+        display: none;
+    }
+    .call-center{
+        display: block;
+    } */
+    header .nav .nav-logo>a {
+        font-size: 16px;
+    }
+
+    header .nav .nav-logo>p {
+        font-size: 4px;
+    }
+
+    header .nav .nav-item .nav-link>ul li a {
+        padding: 5px 7px;
+    }
+
+    header .nav .nav-item .nav-call .call {
+        width: 30px;
+        height: 25px;
+        margin-left: 0;
+    }
+
+    header .nav .nav-item .nav-call .call i {
+        font-size: 17px;
+    }
+
+    header .header-info {
+        padding: 140px 30px;
+    }
+
+    header .header-info h1 {
+        font-size: 22px;
+        letter-spacing: 0;
+    }
+
+    header .header-info p {
+        font-size: 16px;
+        padding: 15px 0;
+    }
+
+    header .header-info .info-icon a {
+        font-size: 17px;
+    }
+}
+
+/* main start */
+main {
+    width: 100%;
+    background: #B8B8B8;
+    display: flex;
+    justify-content: center;
+}
+
+main .component {
+    width: 1320px;
+    margin:50px 0 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .component .card {
+    width: 320px;
+    background: #F5F5F5;
+    padding: 10px 10px;
+    margin: 5px;
+}
+
+main .component .card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    animation-name: zoomin;
+}
+
+main .component .card .card-info {
+    display: flex;
+    flex-direction: column;
+}
+
+main .component .card .card-info b {
+    font-size: 16px;
+    line-height: 3.25;
+}
+
+main .component .card .card-info i{
+    font-size: 14px;
+    color: #406367;
+    line-height: 2.17;
+    margin: 18px 0 10px;
+} 
+main .component .card .card-info a{
+    color: #000;
+    padding: 10px 0 ;
+}
+main .component .card .card-info tt{
+    letter-spacing: .5px;
+}
+/* xs(320px) <= 575px */
+@media screen and (max-width:575px){
+    main .component{
+        display: flex;
+        justify-content: center;
+    }
+}
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+section .section-info{
+    width: 1320px;
+    display: flex;
+    justify-content: center;
+    padding: 35px 0 ;
+}
+section .section-info .content-info{
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+/* product html */
+main .component .div{
+    padding: 65px 0 0 ;
+    margin: auto;
+}
